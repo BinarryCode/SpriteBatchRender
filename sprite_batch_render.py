@@ -51,7 +51,7 @@ bl_info = \
         "name" : "Sprite Batch Render",
         "author" : "Pekka Väänänen <pekka.vaananen@iki.fi>",
         "version" : (1, 3, 2),
-        "blender" : (2, 91, 0),
+        "blender" : (2, 79, 0),
         "location" : "Render",
         "description" :
             "Renders the scene from multiple directions.",
@@ -62,7 +62,7 @@ bl_info = \
     }
 
 class SpriteRenderSettings(bpy.types.PropertyGroup):
-    path: StringProperty (
+    path = StringProperty (
         name = "Sprite render path",
         description = """Where to save the sprite frames.\
  %s = frame name\
@@ -70,27 +70,27 @@ class SpriteRenderSettings(bpy.types.PropertyGroup):
         default = "C:/temp/sprite%s%s.png"
     )
 
-    steps: IntProperty (
+    steps = IntProperty (
         name = "Steps",
         description = "The number of different angles to render",
         default = 8
     )
 
-    framenames: StringProperty (
+    framenames = StringProperty (
         name = "Frame names",
         description = """The naming scheme for all frames.
  Each letter corresponds to a single frame.""",
         default = "ABCDEFGHIJKLMN"
     )
 
-    anglenames: StringProperty (
+    anglenames = StringProperty (
         name = "Step names",
         description = """The naming scheme for rotation steps.
  Each letter corresponds to a single camera angle.""",
         default = "12345678"
     )
 
-    target: StringProperty (
+    target = StringProperty (
         name = "Target object",
         description = """The object to be rotated. Usually an Empty
 with the actual models as children.""",
